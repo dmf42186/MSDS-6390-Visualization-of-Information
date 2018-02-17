@@ -4,7 +4,7 @@ void setup() {
   size(1000, 500);
   kobe = loadImage("kobe.jpg");
   kobe.resize(1000, 500);
-  background(kobe);  
+  background(0);  
 }
 
 void draw() {
@@ -19,16 +19,21 @@ void draw() {
   for(int i=0; i<17; i++) {
     text(axisX[i], interval*(i+1), 425);
   }
-  
+  /*
   float[] axisY = {0.25, 0.50, 0.75, 1.00, 1.25, 1.50, 1.75, 2.00, 2.25, 2.50, 2.75, 3.00, 3.25, 3.50, 3.75, 4.00};
   for(int i=0; i<16; i++) {
     text(axisY[i], 10, 400-18.75*(i+1));
   }
-  
+  */
+  String[] axisY = {"CLE", "DAL", "DEN", "GSW", "HOU", "IND", "LAC"};
+  for(int i=0; i<7; i++) {
+    text(axisY[i], 10, 400-30*(i+1));
+  }
+  /*
   stroke(255);
   strokeWeight(5);
   line(0, 450, 0, 100); 
-  
+  */
   
   float[] startCLE = {0.44, 0.33, 0.38, 0.36, 0.41, 0.40, 0.53, 0.45, 0.50, 0.37, 0.43, 0.49, 0.48, 0.36, 0.38, 0.33, 0.42, 0.63, 0.44};
   float[] control1CLE = {0.42, 0.34, 0.38, 0.37, 0.41, 0.43, 0.52, 0.46, 0.47, 0.38, 0.45, 0.49, 0.46, 0.37, 0.37, 0.35, 0.46, 0.59, 0.44};
