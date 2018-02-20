@@ -1,4 +1,4 @@
-float interval = 1800/18;
+float interval = 1200/18;
 String[] teams = {"CLE", "DAL", "DEN", "GSW", "HOU", "IND", "LAC"};
 int[][] teamColors = {
   {128,0,255},
@@ -11,28 +11,28 @@ int[][] teamColors = {
 };
 
 void setup() {    
-  size(1800, 900);
+  size(1200, 800);
   background(0);
   drawGraph();
 }
 
 void drawGraph() {
-  drawTitleAxes();
   drawLines();
+  drawTitleAxes();
   drawLegend();
 }
 
 void drawTitleAxes() {
   textSize(36);
-  text("Kobe Bryant's Field Goal % vs. Selected Teams by Year", 700, 50);
+  text("Kobe Bryant's Field Goal % vs. Selected Teams by Year", 200, 100);
   textSize(12);
   stroke(255);  
   strokeWeight(5);
-  line(0, 800, width, 800);
+  line(0, 700, width, 700);
   String[] axisX = {"1996-97", "1997-98", "1998-99", "1999-00", "2000-01", "2001-02", "2002-03", "2003-04", "2004-05", 
   "2005-06", "2006-07", "2007-08", "2008-09", "2009-10", "2010-11", "2011-12", "2012-13"};
   for(int i=0; i<17; i++) {
-    text(axisX[i], interval*(i+1), 825);
+    text(axisX[i], interval*(i+1), 725);
   }
   for(int i=0; i<10; i++) {
     String[] axisY = {"30%", "35%", "40%", "45%", "50%", "55%", "60%", "65%", "70%", "75%"};
@@ -55,13 +55,13 @@ void drawLine(int rowN, float start, float c1, float c2, float end) {
   noFill();
   bezier(
     interval*rowN,
-    map(start, 0.25, 0.75, 800, 100),
+    map(start, 0.25, 0.75, 600, 100),
     interval*rowN+interval*1/3,
-    map(c1, 0.25, 0.75, 800, 100),
+    map(c1, 0.25, 0.75, 600, 100),
     interval*rowN+interval*2/3,
-    map(c2, 0.25, 0.75, 800, 100),
+    map(c2, 0.25, 0.75, 600, 100),
     interval*(rowN+1),
-    map(end, 0.25, 0.75, 800, 100));  
+    map(end, 0.25, 0.75, 600, 100));  
 }
 
 void drawLines() {
