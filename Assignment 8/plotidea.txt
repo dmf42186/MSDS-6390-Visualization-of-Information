@@ -1,0 +1,25 @@
+Filters on:	Age, Sex, Children, Smoker, Region
+
+Graph:
+
+1. (2)	Box plot for 'charges' by 'age' and 'sex'. This will show the distribution of insurance charges for different age groups and sex.
+2. (1)	Scatter plot 'age' vs 'charges'.	
+3. (1)	Frequency plot for agr groups 18-29, 30-44, 45-54, >55 / for groups based on charges - 1000 - 9999, 10000-19999, 20000-29999, >30000
+4. (1)	Pie chart presenting percentage of smokers.
+5. (1)	Pie chart presenting percentage of smokers for low and high insurance charges. (High insurance : >15000 - smoker/nonsmoker)
+
+
+Ref:	https://www.idashboards.com/dashboard-examples/higher-education-dashboard-example-retention-rates/
+
+
+
+Source:
+
+Pie chart:	https://processing.org/examples/piechart.html
+
+Histogram:	https://processing.org/examples/histogram.html
+
+Scatterplot:	https://www.openprocessing.org/sketch/51382#
+		https://people.cs.pitt.edu/~jwenskovitch/processing.html
+		https://forum.processing.org/one/topic/how-do-i-create-a-simple-scatter-plot-graph.html
+
