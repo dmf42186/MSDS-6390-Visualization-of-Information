@@ -57,7 +57,7 @@ void controls() {
   .setSpacingColumn(60)
   .addItem("Smoker", 1)
   .addItem("Non Smoker", 2);
-  
+
   startY += 30;
   region = controlP5.addRadioButton("region",10,startY)
   .setItemsPerRow(2)
@@ -66,7 +66,7 @@ void controls() {
   .addItem("northeast", 2)
   .addItem("southwest", 3)
   .addItem("southeast", 4);
-  
+
   startY += 30;
   charges = controlP5.addRange("charges")
   .setBroadcast(false) 
@@ -179,11 +179,11 @@ void loadData(
     float charges = row.getFloat("charges");
     
     if (age < ageMinValue || age > ageMaxValue) continue;
-    if (sexValue != null && sex != sexValue) continue;
+    if (sexValue != null && !sex.equals(sexValue)) continue;
     if (bmi < bmiMinValue || bmi > bmiMaxValue) continue;
     if (children < childrenMinValue || children > childrenMaxValue) continue;
-    if (smokerValue != null && smoker != smokerValue) continue;
-    if (regionValue != null && region != regionValue) continue;
+    if (smokerValue != null && !smoker.equals(smokerValue)) continue;
+    if (regionValue != null && !region.equals(regionValue)) continue;
     if (charges < chargesMinValue || charges > chargesMaxValue) continue;
    
     rowCounter += 1;
@@ -204,11 +204,11 @@ void loadData(
     float charges = row.getFloat("charges");
 
     if (age < ageMinValue || age > ageMaxValue) continue;
-    if (sexValue != null && sex != sexValue) continue;
+    if (sexValue != null && !sex.equals(sexValue)) continue;
     if (bmi < bmiMinValue || bmi > bmiMaxValue) continue;
     if (children < childrenMinValue || children > childrenMaxValue) continue;
-    if (smokerValue != null && smoker != smokerValue) continue;
-    if (regionValue != null && region != regionValue) continue;
+    if (smokerValue != null && !smoker.equals(smokerValue)) continue;
+    if (regionValue != null && !region.equals(regionValue)) continue;
     if (charges < chargesMinValue || charges > chargesMaxValue) continue;
     
     data[rowIndex][0] = age;
