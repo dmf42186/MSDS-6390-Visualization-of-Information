@@ -6,6 +6,8 @@ void setup() {
   background(255);
   loadData();
   example();
+  
+  controls();
 }
 
 void loadData() {
@@ -22,4 +24,8 @@ void loadData() {
     data[i][5] = row.getString("region");
     data[i][6] = row.getFloat("charges");
   }
+}
+
+void draw() {
+  background(0);
 }
