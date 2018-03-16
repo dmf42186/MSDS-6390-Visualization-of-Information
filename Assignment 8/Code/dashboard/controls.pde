@@ -202,7 +202,7 @@ void loadData(
     String smoker = row.getString("smoker");
     String region = row.getString("region");
     float charges = row.getFloat("charges");
-    
+
     if (age < ageMinValue || age > ageMaxValue) continue;
     if (sexValue != null && sex != sexValue) continue;
     if (bmi < bmiMinValue || bmi > bmiMaxValue) continue;
