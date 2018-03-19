@@ -41,18 +41,20 @@ void horizontalbar(float x1, float y1, float w1, float h1) {
 void drawTitleAxesHorizontalBar(float x1, float y1, float w1, float h1) {
   textSize(16);
   fill(255);
-  text("Frequency Distribution of Insurance Charges", x1+25, 20);      // Chart Title
+  text("Frequency Distribution of Insurance Charges", x1+25, 20);                    // Chart Title
   
   textSize(12);
   fill(255);
   stroke(255);  
   strokeWeight(2);
-  line(x1, y1+h1-50, x1+w1, y1+h1-50);
+  line(x1, y1+h1, x1+w1, y1+h1);
+  line(x1, y1+h1-50, x1+w1, y1+h1-50);                                               // x-axis
+  line(x1, y1, x1, x1+h1);                                                           // y-axis
     
   float intervalX = w1/8;
   String[] axisX = {"100", "200", "300", "400", "500", "600", "700"}; 
   for(int i=0; i<7; i++) {
-    text(axisX[i], x1+intervalX*(i+1), h1-25);    // x-axis labels (Charges)
+    text(axisX[i], x1+intervalX*(i+1), h1-25);                                       // x-axis labels (Charges)
   }
   
   textSize(12);
@@ -62,6 +64,6 @@ void drawTitleAxesHorizontalBar(float x1, float y1, float w1, float h1) {
   float intervalY = (h1-100)/5;
   String[] axisY = {"0-9,999", "10,000-19,999", "20,000-29,999", "Above 30,000"};
   for(int i=0; i<4; i++) {
-    text(axisY[i], x1+6, (h1-50)-intervalY*(i+1)-5);    // y-axis labels (Frequency)
+    text(axisY[i], x1+6, (h1-50)-intervalY*(i+1)-5);                                 // y-axis labels (Frequency)
   }
 }

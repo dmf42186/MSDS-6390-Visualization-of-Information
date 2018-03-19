@@ -47,12 +47,14 @@ void drawTitleAxesBubble(float x4, float y4, float w4, float h4) {
   fill(255);
   stroke(255);  
   strokeWeight(2);
-  line(x4, y4+(h4-50), x4+w4, y4+(h4-50));
+  line(x4, y4+h4, x4+w4, y4+h4);
+  line(x4, y4+(h4-50), x4+w4, y4+(h4-50));                             // x-axis
+  line(x4, y4, x4, y4+h4);                                             // y-axis
   
   float intervalX = w4/3;
   String[] axisX = {"Female", "Male"};
   for(int i=0; i<2; i++) {
-    text(axisX[i], x4+intervalX*(i+1), y4+(h4-25));                    // x-axis labels (Charges)
+    text(axisX[i], x4+intervalX*(i+1)-15, y4+(h4-25));                 // x-axis labels (Charges)
   }
   
   textSize(12);
@@ -62,6 +64,6 @@ void drawTitleAxesBubble(float x4, float y4, float w4, float h4) {
   float intervalY = (h4-100)/3;
   String[] axisY = {"Non-Smoker", "Smoker"};
   for(int i=0; i<2; i++) {
-    text(axisY[i], x4+1, y4+(h4-50)-intervalY*(i+1));                  // y-axis labels (Frequency)
+    text(axisY[i], x4+5, y4+(h4-50)-intervalY*(i+1));                  // y-axis labels (Frequency)
   }
 }

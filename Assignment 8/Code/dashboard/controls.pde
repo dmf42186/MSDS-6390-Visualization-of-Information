@@ -149,7 +149,7 @@ void controlEvent(ControlEvent theEvent) {
       chargesMinValue,
       chargesMaxValue
     );
-    example();
+   
   }
 }
 
@@ -188,7 +188,7 @@ void loadData(
    
     rowCounter += 1;
   }
-  println(rowCounter);
+  //println(rowCounter);
   //Table insurance = loadTable("data.csv", "header");
   data = new Object[rowCounter][7];
   
